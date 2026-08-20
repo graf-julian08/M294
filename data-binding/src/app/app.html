@@ -1,0 +1,14 @@
+<h1>Meine Server App</h1>
+<hr>
+@for (server of servers; track server) {
+  <app-server></app-server>
+}
+<app-sizer [(size)]="fontSizePx" ></app-sizer>
+<h2>Two -way Binding</h2>
+<div id="two-way-1">
+  <div [style.fontSize.px]="fontSizePx">
+      Resizible Text
+  </div>
+  <label for="font-size">Font Size Px:</label>
+  <input id="font-size" type="number" [(ngModel)]="fontSizePx"> 
+</div>

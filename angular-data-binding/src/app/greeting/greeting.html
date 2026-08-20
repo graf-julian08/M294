@@ -1,0 +1,8 @@
+<h1>Hallo {{ name }}!</h1>
+<input [(ngModel)]="name2">
+<br>
+<button (click)="changeName()">Name ändern</button>
+<button (click)="resetName()">Reset</button>
+<br>
+<br>
+<input [value]="name" [(ngModel)]="name">

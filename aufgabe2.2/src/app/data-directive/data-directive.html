@@ -1,0 +1,8 @@
+<button (mousedown)="visible()" (mouseup)="hidden()">Details anzeigen</button>
+<p>Passwort = {{ passwd }}</p>
+
+@for (log of logArray; track log; let i = $index) {
+<div [ngStyle]="i >= 5 ? {backgroundColor: 'lightblue', color: 'black'} : {}" [ngClass]="i >= 5 ? 'white-text' : ''">
+    Logs: {{ log }}
+</div>
+}

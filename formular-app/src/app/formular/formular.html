@@ -1,0 +1,30 @@
+<hr>
+<h1>Formular</h1>
+<form [formGroup]="meinFormular" (ngSubmit)="onSubmit()">
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" formControlName="name" required>
+    </div>
+
+    <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" formControlName="email" required>
+    </div>
+
+    <div>
+        <label for="nachricht">Nachricht:</label>
+        <textarea id="nachricht" formControlName="nachricht"></textarea>
+    </div>
+
+    <button type="submit" [disabled]="meinFormular.invalid">Absenden</button>
+</form>
+<hr>
+
+@if (meinFormular.valid) {
+  <div class="result-box">
+    <h2>Eingegebene Daten:</h2>
+    <p><strong>Name:</strong> {{ meinFormular.value.name }}</p>
+    <p><strong>Email:</strong> {{ meinFormular.value.email }}</p>
+    <p><strong>Nachricht:</strong> {{ meinFormular.value.nachricht }}</p>
+  </div>
+}

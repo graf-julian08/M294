@@ -1,0 +1,50 @@
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Abstand zwischen den Eingabefeldern */
+  max-width: 400px; /* Damit es nicht zu breit wird */
+  font-family: sans-serif;
+}
+
+/* Sorgt dafür, dass Label über dem Input steht */
+form div {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px; /* Kleiner Abstand zum Feld */
+  font-weight: bold;
+}
+
+input, textarea {
+  padding: 8px;
+  font-size: 16px;
+}
+
+textarea {
+  height: 100px; /* Etwas mehr Platz für Text */
+}
+
+button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: default;
+}
+
+/* Die Ergebnis-Box */
+.result-box {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f9f9f9;
+  max-width: 400px;
+  font-family: sans-serif;
+}

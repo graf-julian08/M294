@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>KI-Text Humanizer</h1>
+  
+  <textarea 
+    [(ngModel)]="inputText" 
+    placeholder="Füge hier deinen KI-generierten Text ein...">
+  </textarea>
+  
+  <button (click)="sendText()" [disabled]="loading">
+    {{ loading ? 'Wird analysiert...' : 'Analysieren' }}
+  </button>
+  
+  <div class="response" *ngIf="response">
+    <h2>Ergebnis:</h2>
+    <pre>{{ response }}</pre>
+  </div>
+</div>
